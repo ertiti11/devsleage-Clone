@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import DEVLOGO from '../assets/devsleague.svg';
+---
+
+<Layout title="Welcome to Astro.">
+	<main class="pb-20  max-w-5xl m-auto">
+		<div class="flex items-center justify-center">
+			<div class=" inset-0 opacity-90 contrast-125 ">
+				<img class="backdrop-blur	" src={DEVLOGO.src} alt="descripción de la imagen"/>;
+
+			</div>
+		</div>
+		<div>
+			
+		</div>
+		<section class="grid grid-cols-6 gap-8 px-4 mx-auto gap-y-16 mt-12">
+			<Card title="que es la Deavlegue" rows={4}/>
+			<Card title="donde verlo" rows={2}/>
+			<Card title="donde verlo" rows={2}/>
+			<Card title="donde verlo" rows={4}/>
+		</section>
+
+	</main>
+</Layout>
+
