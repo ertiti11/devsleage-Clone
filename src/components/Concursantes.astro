@@ -23,18 +23,44 @@ const CONCURSANTES = [
 ];
 ---
 
-<section class="flex flex-col w-full p-6">
-  
-    {
-      CONCURSANTES.map((concursante) => {
-        return (
-          <div class="flex justify-between h-20">
-            <img src={concursante.image} alt={concursante.nombre} class=" rounded-3xl  w-20 border-1 border-white" />
-            <p class="  font-bold text-white text-3xl">{concursante.nombre}</p>
-            <p class="text-white">{concursante.points}</p>
-          </div>
-        );
-      })
-    }
-  
+<section class="flex flex-col w-full p-12 gap-5">
+  <table>
+    <tbody>
+      {
+        CONCURSANTES.map((concursante, index) => {
+          return (
+            <tr>
+              <th>
+                <p class="font-bold text-3xl text-white">{index}</p>
+              </th>
+
+              <td>
+                <img
+                  src={concursante.image}
+                  alt={concursante.nombre}
+                  class=" rounded-3xl  w-20 border-1 border-white"
+                />
+              </td>
+              <td>
+                <p class="font-bold text-5xl text-white">
+                  {concursante.nombre}
+                </p>
+              </td>
+
+              <td>
+                <p class="font-bold text-3xl text-yellow-400">{concursante.points}</p>
+              </td>
+            </tr>
+          );
+        })
+      }
+    </tbody>
+  </table>
 </section>
+
+<!-- <div class="flex justify-between alige-middle h-20 items-center">
+    <p class="text-white font-bold font-5xl">{index+1}</p>
+    <img src={concursante.image} alt={concursante.nombre} class=" rounded-3xl  w-20 border-1 border-white" />
+    <p class="  font-bold text-white text-3xl">{concursante.nombre}</p>
+    <p class="text-white">{concursante.points}</p>
+  </div> -->
