@@ -1,0 +1,40 @@
+---
+const CONCURSANTES = [
+  {
+    nombre: "Goncy",
+    image: "https://devsleague.com/img/capitanes-tr/goncy.png",
+    points: 65,
+  },
+  {
+    nombre: "Carmen",
+    image: "https://devsleague.com/img/capitanes-tr/carmen.png",
+    points: 65,
+  },
+  {
+    nombre: "Héctor",
+    image: "https://devsleague.com/img/capitanes-tr/hector.png",
+    points: 41,
+  },
+  {
+    nombre: "Noe",
+    image: "https://devsleague.com/img/capitanes-tr/noe.png",
+    points: 30,
+  },
+];
+---
+
+<section class="flex flex-col w-full p-6">
+  
+    {
+      CONCURSANTES.map((concursante) => {
+        return (
+          <div class="flex justify-between h-20">
+            <img src={concursante.image} alt={concursante.nombre} class=" rounded-3xl  w-20 border-1 border-white" />
+            <p class="  font-bold text-white text-3xl">{concursante.nombre}</p>
+            <p class="text-white">{concursante.points}</p>
+          </div>
+        );
+      })
+    }
+  
+</section>

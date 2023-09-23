@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import DEVLOGO from "../assets/devsleague.svg";
 import Card from "../layouts/Card.astro";
 import "./global.css";
+import { PruebasMarquee } from "../components/Pruebas";
+import Concursantes from "../components/Concursantes.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -74,8 +76,9 @@ import "./global.css";
         </div>
       </Card>
 
-      <Card>
-        <div></div>
+      <Card title="concursantes"
+      className="[grid-column:auto_/_span_6] md:[grid-column:auto_/_span_4]">
+        <Concursantes />
       </Card>
     </section>
   </main>
